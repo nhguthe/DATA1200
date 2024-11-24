@@ -1,0 +1,181 @@
+/* =========================================================
+   MAIN.CSS - SHARED STYLESHEET
+   ---------------------------------------------------------
+   Table of Contents:
+   1. General Reset
+   2. Body Styling
+   3. Header and Navigation
+   4. Main Content
+   5. Accordion (Expandable Sections)
+   6. Footer
+   ========================================================= */
+
+/* ---------------------------------------------------------
+   1. General Reset
+   --------------------------------------------------------- */
+   body, h1, h2, p, ul, li, table, th, td {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ---------------------------------------------------------
+   2. Body Styling
+   --------------------------------------------------------- */
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #fff;
+    padding: 20px;
+}
+
+a {
+    color: #0044cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* ---------------------------------------------------------
+   3. Header and Navigation
+   --------------------------------------------------------- */
+header {
+    background: #ffd400;
+    color: black;
+    padding: 15px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .logo {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul li a {
+    color: black;
+    padding: 10px;
+    font-weight: bold;
+}
+
+header nav ul li a:hover {
+    background-color: #ffe066;
+    border-radius: 5px;
+}
+
+/* ---------------------------------------------------------
+   4. Main Content
+   --------------------------------------------------------- */
+main {
+    margin: 20px auto;
+    max-width: 900px;
+    padding: 20px;
+}
+
+main h1 {
+    font-size: 2em;
+    margin-bottom: 15px;
+    text-align: center;
+    color: #333;
+}
+
+main .metadata-section {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-top: 2px solid #ddd;
+    border-bottom: 2px solid #ddd;
+    padding: 20px 0;
+    justify-content: space-between;
+}
+
+main .metadata-section div {
+    flex: 1 1 calc(33.333% - 20px);
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+main .metadata-section div span {
+    display: block;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+main p {
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 1.1em;
+}
+
+/* ---------------------------------------------------------
+   5. Accordion (Expandable Sections)
+   --------------------------------------------------------- */
+.accordion {
+    border: 1px solid #ddd;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion h2 {
+    font-size: 1.2em;
+    background: #ffd400;
+    padding: 15px;
+    cursor: pointer;
+    margin: 0;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.accordion h2:hover {
+    background: #ffe066;
+}
+
+.accordion h2::after {
+    content: '+';
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.accordion h2.active::after {
+    content: '-';
+}
+
+.accordion p {
+    padding: 15px;
+    margin: 0;
+    background: #fff;
+    color: #333;
+    display: none;
+}
+
+.accordion p.active {
+    display: block;
+}
+
+/* ---------------------------------------------------------
+   6. Footer
+   --------------------------------------------------------- */
+footer {
+    background: #ffd400;
+    text-align: center;
+    padding: 15px 20px;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: black;
+}
