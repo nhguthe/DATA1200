@@ -1,46 +1,63 @@
-// Ensure the DOM is fully loaded before running the script
-document.addEventListener("DOMContentLoaded", () => {
-    // Mobile menu toggle for navigation
-    const navToggle = document.createElement("button");
-    navToggle.textContent = "Menu";
-    navToggle.setAttribute("aria-expanded", "false");
-    navToggle.setAttribute("aria-label", "Toggle navigation menu");
-    const nav = document.querySelector("nav");
+// =========================================================
+// SCRIPTS.JS - SHARED JAVASCRIPT FILE
+// ---------------------------------------------------------
+// Table of Contents:
+// 1. Accordion Functionality
+// 2. Navigation Menu Highlight
+// 3. Collapsible Sections Functionality
+// =========================================================
 
-    if (nav) {
-        nav.prepend(navToggle);
+// ---------------------------------------------------------
+// 1. Accordion Functionality
+// ---------------------------------------------------------
+document.querySelectorAll('.accordion h2').forEach((accordionHeader) => {
+    accordionHeader.addEventListener('click', () => {
+        // Toggle active class on the header
+        accordionHeader.classList.toggle('active');
 
-        // Add event listener for toggle button
-        navToggle.addEventListener("click", () => {
-            const expanded = navToggle.getAttribute("aria-expanded") === "true" || false;
-            navToggle.setAttribute("aria-expanded", !expanded);
-            nav.classList.toggle("open");
-        });
-    }
+        // Get the next sibling element (the accordion content)
+        const accordionContent = accordionHeader.nextElementSibling;
 
-    // Smooth scrolling for internal links
-    const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-    smoothScrollLinks.forEach(link => {
-        link.addEventListener("click", (event) => {
-            event.preventDefault();
-            const targetId = link.getAttribute("href").substring(1);
-            const targetElement = document.getElementById(targetId);
-
-            if (targetElement) {
-                window.scrollTo({
-                    top: targetElement.offsetTop,
-                    behavior: "smooth"
-                });
-            }
-        });
-    });
-
-    // Highlight active navigation link
-    const currentPath = window.location.pathname.split("/").pop();
-    const navLinks = document.querySelectorAll("nav a");
-    navLinks.forEach(link => {
-        if (link.getAttribute("href") === currentPath) {
-            link.classList.add("active");
+        // Check if the content is visible and toggle display
+        if (accordionContent.classList.contains('active')) {
+            accordionContent.style.display = 'none';
+            accordionContent.classList.remove('active');
+        } else {
+            accordionContent.style.display = 'block';
+            accordionContent.classList.add('active');
         }
+    });
+});
+
+// ---------------------------------------------------------
+// 2. Navigation Menu Highlight
+// ---------------------------------------------------------
+// Highlights the current page in the navigation menu
+function highlightCurrentPage() {
+    const currentPage = window.location.pathname.split('/').pop();
+    const navLinks = document.querySelectorAll('header nav ul li a');
+
+    navLinks.forEach((link) => {
+        const linkPage = link.getAttribute('href');
+
+        // If the link matches the current page, add a highlight class
+        if (linkPage === currentPage) {
+            link.classList.add('active-link');
+        }
+    });
+}
+
+// ---------------------------------------------------------
+// Collapsible Sections Functionality
+// ---------------------------------------------------------
+document.addEventListener("DOMContentLoaded", () => {
+    const collapsibleHeadings = document.querySelectorAll(".collapsible-heading");
+
+    collapsibleHeadings.forEach((heading) => {
+        heading.addEventListener("click", () => {
+            const content = heading.nextElementSibling;
+            heading.classList.toggle("active-collapsible");
+            content.classList.toggle("active");
+        });
     });
 });
