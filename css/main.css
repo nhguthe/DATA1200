@@ -2,25 +2,33 @@
    MAIN.CSS - SHARED STYLESHEET
    ---------------------------------------------------------
    Table of Contents:
-   1. General Reset
-   2. Body Styling
-   3. Header and Navigation
+   1. Reset & Base Styles
+   2. General Link Styles
+   3. Header & Navigation
    4. Main Content
-   5. Accordion (Expandable Sections)
-   6. Footer
-   7. Grid Layout for Metadata Section
-   8. Collapsible Content Styling
+   5. Accordion Styles
+   6. Info Grid
+   7. Collapsible Sections
+   8. Cover Photo
+   9. Study Structure Table
+   10. Faglig Leder Section
+   11. Related Programs Section
+   12. Footer
+   13. Additional Links Styling
    ========================================================= */
 
-/* ---------------------------------------------------------
-   1. General Reset
-   --------------------------------------------------------- */
-   * {
+/* =========================================================
+   1. Reset & Base Styles
+   ========================================================= */
+
+/* Reset styles for consistent margin, padding, and box-sizing */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+/* Base body styling for consistent font and color */
 body {
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
@@ -28,9 +36,11 @@ body {
     background-color: #fff;
 }
 
-/* ---------------------------------------------------------
-   2. Body Styling
-   --------------------------------------------------------- */
+/* =========================================================
+   2. General Link Styles
+   ========================================================= */
+
+/* General link styling with transition for hover effect */
 a {
     color: #0044cc;
     text-decoration: none;
@@ -41,9 +51,11 @@ a:hover {
     text-decoration: underline;
 }
 
-/* ---------------------------------------------------------
-   3. Header and Navigation
-   --------------------------------------------------------- */
+/* =========================================================
+   3. Header & Navigation
+   ========================================================= */
+
+/* Header styling for overall layout and background color */
 header {
     display: flex;
     align-items: center;
@@ -52,17 +64,20 @@ header {
     padding: 10px 20px;
 }
 
+/* Logo container to ensure consistent image sizing */
 header .logo-container img {
     max-height: 50px;
     width: auto;
 }
 
+/* Navigation list styling to display horizontal menu */
 header nav ul {
     display: flex;
     list-style: none;
     gap: 15px;
 }
 
+/* Individual navigation link styles, including hover effects */
 header nav ul li a {
     color: #000;
     font-weight: bold;
@@ -77,15 +92,18 @@ header nav ul li a.active-link {
     color: #000;
 }
 
-/* ---------------------------------------------------------
+/* =========================================================
    4. Main Content
-   --------------------------------------------------------- */
+   ========================================================= */
+
+/* Styling for main content area, including margin and padding */
 main {
     margin: 20px auto;
     max-width: 900px;
     padding: 20px;
 }
 
+/* Main heading styling for emphasis */
 main h1 {
     font-size: 2rem;
     margin-bottom: 15px;
@@ -93,185 +111,24 @@ main h1 {
     color: #333;
 }
 
+/* Paragraph styling within main content area */
 main p {
     margin-bottom: 20px;
     color: #666;
     font-size: 1.1rem;
 }
 
+/* Unordered list styling for content within the main area */
 main ul {
     margin-left: 20px;
     list-style-type: disc;
 }
 
-/* ---------------------------------------------------------
-   5. Accordion (Expandable Sections)
-   --------------------------------------------------------- */
-.accordion h2 {
-    font-size: 1.2rem;
-    background-color: #fcdd04;
-    padding: 15px;
-    margin: 0;
-    color: #000;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border: 1px solid #ddd;
-    transition: background-color 0.3s ease;
-}
+/* =========================================================
+   5. Accordion Styles
+   ========================================================= */
 
-.accordion h2:hover,
-.accordion h2.active {
-    background-color: #ffe066;
-}
-
-.accordion h2::after {
-    content: attr(data-icon);
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-left: 10px;
-    transition: transform 0.3s ease;
-}
-
-.accordion h2.active::after {
-    transform: rotate(45deg);
-}
-
-.accordion-content {
-    display: none;
-    padding: 15px;
-    background-color: #fff;
-    color: #333;
-    border: 1px solid #ddd;
-    border-top: none;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-}
-
-.accordion-content.active {
-    display: block;
-}
-
-/* ---------------------------------------------------------
-   6. Footer
-   --------------------------------------------------------- */
-
-/* ---------------------------------------------------------
-   7. Grid Layout for Metadata Section
-   --------------------------------------------------------- */
-.info-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-    gap: 20px;
-    margin-top: 20px;
-    padding: 20px;
-    border-top: 1px solid #ddd;
-}
-
-.info-item {
-    text-align: center;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-}
-
-.info-item:hover {
-    background-color: #ffe066;
-    transform: translateY(-3px);
-}
-
-.info-item h3 {
-    font-size: 1rem;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #333;
-}
-
-.info-item p {
-    font-size: 0.9rem;
-    color: #666;
-}
-
-/* ---------------------------------------------------------
-   8. Collapsible Content Styling
-   --------------------------------------------------------- */
-.collapsible-heading {
-    font-size: 1.25rem;
-    font-weight: bold;
-    background-color: #fcdd04;
-    color: #333;
-    padding: 15px;
-    cursor: pointer;
-    border: 1px solid #ddd;
-    margin: 5px 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    transition: background-color 0.3s ease;
-}
-
-.collapsible-heading.active-collapsible {
-    background-color: #ffe066;
-}
-
-/* Updated Collapsible Content Styling */
-.collapsible-content {
-    display: none;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-top: none;
-    background-color: #fff;
-    transition: max-height 0.3s ease, opacity 0.3s ease;
-    overflow: visible; /* Ensure content is fully visible */
-    max-height: none;  /* Allow content to expand without restriction */
-}
-
-.collapsible-content.active {
-    display: block;
-    opacity: 1;
-    max-height: none; /* Remove max-height restriction for expanded content */
-}
-
-/* ---------------------------------------------------------
-   8. Cover photo styling
-   --------------------------------------------------------- */
-#cover-photo {
-    background: url('../media/DALLE_cover.webp') no-repeat center center;
-    background-size: cover;
-    height: 700px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
-    text-align: center;
-    padding: 20px;
-}
-
-#cover-photo h1 {
-    font-size: 2.5rem;
-    margin: 0;
-}
-
-/* Link styling within collapsible content */
-.collapsible-content a {
-    color: black;
-    font-weight: bold;
-    text-decoration: none;
-    border-bottom: 2px solid #fcdd04; /* OsloMet-inspired yellow underline */
-    transition: border-color 0.3s ease;
-}
-
-.collapsible-content a:hover {
-    border-bottom-color: #ffe066; /* Lighter yellow for hover effect */
-    color: black; /* Keep text color consistent on hover */
-}
-
-/* ---------------------------------------------------------
-   9.    Accordion Heading Styling
-   --------------------------------------------------------- */
+/* Styling for collapsible headings in accordion sections */
 .accordion .collapsible-heading {
     font-size: 1.25rem;
     font-weight: bold;
@@ -291,6 +148,7 @@ main ul {
     background-color: #ffe066;
 }
 
+/* Icon to indicate collapsible state (+ or -) */
 .accordion .collapsible-heading::after {
     content: '+';
     font-size: 1.5rem;
@@ -299,12 +157,13 @@ main ul {
     transition: transform 0.3s ease;
 }
 
+/* Change icon on expansion */
 .accordion .collapsible-heading[aria-expanded="true"]::after {
     content: '-';
     transform: rotate(45deg);
 }
 
-/* Accordion Content Styling */
+/* Collapsible content styling for accordion sections */
 .accordion .collapsible-content {
     display: none;
     padding: 15px;
@@ -318,13 +177,126 @@ main ul {
     display: block;
 }
 
-/* Responsive Table Styling for "Studiets Oppbygging" Section */
-#study-structure .collapsible-content {
-    overflow-x: auto; /* Allow horizontal scrolling if content overflows */
+/* =========================================================
+   6. Info Grid
+   ========================================================= */
+
+/* Grid layout to display study information in equal columns */
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+    padding: 20px;
+    border-top: 1px solid #ddd;
 }
 
+/* Individual info items within the grid */
+.info-item {
+    text-align: center;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover effect to highlight selected info item */
+.info-item:hover {
+    background-color: #ffe066;
+    transform: translateY(-3px);
+}
+
+/* =========================================================
+   7. Collapsible Sections
+   ========================================================= */
+
+/* Collapsible headings for different sections */
+.collapsible-heading {
+    font-size: 1.25rem;
+    font-weight: bold;
+    background-color: #fcdd04;
+    color: #333;
+    padding: 15px;
+    cursor: pointer;
+    border: 1px solid #ddd;
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+/* Active state for collapsible headings */
+.collapsible-heading.active-collapsible {
+    background-color: #ffe066;
+}
+
+/* Content within collapsible sections */
+.collapsible-content {
+    display: none;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    background-color: #fff;
+    transition: max-height 0.3s ease, opacity 0.3s ease;
+}
+
+/* Display active collapsible content */
+.collapsible-content.active {
+    display: block;
+    opacity: 1;
+    max-height: none;
+}
+
+/* Link styles within collapsible content */
+.collapsible-content a {
+    color: black;
+    font-weight: bold;
+    text-decoration: none;
+    border-bottom: 2px solid #fcdd04; /* OsloMet-inspired yellow underline */
+    transition: border-color 0.3s ease;
+}
+
+.collapsible-content a:hover {
+    border-bottom-color: #ffe066;
+}
+
+/* =========================================================
+   8. Cover Photo
+   ========================================================= */
+
+/* Styling for cover photo section at top of the page */
+#cover-photo {
+    background: url('../media/DALLE_cover.webp') no-repeat center center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading within the cover photo section */
+#cover-photo h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* =========================================================
+   9. Study Structure Table
+   ========================================================= */
+
+/* Collapsible content styling for study structure */
+#study-structure .collapsible-content {
+    overflow-x: auto;
+}
+
+/* Table for displaying study structure information */
 #study-structure table {
-    min-width: 100%; /* Ensure the table doesn't shrink */
     width: 100%;
     border-collapse: collapse;
     margin: 20px 0;
@@ -332,116 +304,47 @@ main ul {
     text-align: left;
 }
 
-#study-structure th,
-#study-structure td {
+/* Table header and cell styling */
+#study-structure th, #study-structure td {
     border: 1px solid #ddd;
     padding: 10px;
     vertical-align: top;
 }
 
+/* Header styling for the table */
 #study-structure th {
     background-color: #fcdd04;
     font-weight: bold;
     text-align: center;
 }
 
-#study-structure ul {
-    margin: 0;
-    padding-left: 20px;
-}
-
-#study-structure ul li {
-    margin-bottom: 5px;
-}
-
+/* Alternating row colors for better readability */
 #study-structure tbody tr:nth-child(even) {
     background-color: #f9f9f9;
 }
 
+/* Hover effect for table rows */
 #study-structure tbody tr:hover {
     background-color: #ffe066;
 }
 
+/* =========================================================
+   10. Faglig Leder Section
+   ========================================================= */
 
-.study-opportunity a {
-    color: #000;
-    text-decoration: none;
-    font-size: 1.2rem;
-}
-
-.study-opportunity a:hover {
-    text-decoration: underline;
-}
-
-.study-meta {
-    color: #666;
-    font-size: 0.9rem;
-    margin-top: 5px;
-    display: flex;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Styling for "Studiested" Section */
-#studiested {
-    margin: 20px 0;
-}
-
-#studiested h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#studiested .link-arrow {
-    display: inline-block;
-    color: #000;
-    text-decoration: none;
-    border-bottom: 2px solid #fcdd04;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-#studiested .link-arrow::before {
-    content: ">";
-    margin-right: 5px;
-    color: #000;
-}
-
-/* Styling for "Spørsmål om utdanningen?" Section */
-#sporsmal {
-    margin: 20px 0;
-}
-
-#sporsmal h2 {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-#sporsmal .link-contact {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 2px solid #fcdd04;
-    font-weight: bold;
-    font-size: 1rem;
-}
-
-#sporsmal .link-contact:hover {
-    border-bottom-color: #ffe066;
-}
-
-/* Styling for "Faglig leder" Section */
+/* Styling for the Faglig Leder section */
 #faglig-leder {
     margin: 20px 0;
 }
 
+/* Heading within the Faglig Leder section */
 #faglig-leder h2 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+/* Layout for the leader profile section */
 .leader-profile {
     display: flex;
     align-items: center;
@@ -451,6 +354,7 @@ main ul {
     background-color: #f9f9f9;
 }
 
+/* Leader photo styling to ensure consistent shape and size */
 .leader-photo {
     height: 80px;
     width: 80px;
@@ -459,21 +363,25 @@ main ul {
     margin-right: 15px;
 }
 
+/* Info section for the leader profile */
 .leader-info {
     flex: 1;
 }
 
+/* Styling for the leader's name */
 .leader-name {
     font-size: 1.2rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
+/* Paragraph styling within leader info */
 .leader-info p {
     margin: 5px 0;
     color: #333;
 }
 
+/* Link styling within the leader info section */
 .leader-info a {
     color: #000;
     text-decoration: none;
@@ -485,23 +393,30 @@ main ul {
     border-bottom-color: #ffe066;
 }
 
-/* Related Programs Section */
+/* =========================================================
+   11. Related Programs Section
+   ========================================================= */
+
+/* Styling for the related programs section */
 #related-programs {
     margin: 20px 0;
 }
 
+/* Heading for the related programs section */
 #related-programs h2 {
     font-size: 1.5rem;
     font-weight: bold;
     margin-bottom: 20px;
 }
 
+/* List of related programs */
 .program-list {
     display: flex;
     flex-direction: column;
     gap: 10px;
 }
 
+/* Individual program item styling */
 .program-item {
     display: flex;
     justify-content: space-between;
@@ -515,104 +430,81 @@ main ul {
     transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Hover effect for individual program items */
 .program-item:hover {
     background-color: #f9f9f9;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+/* Bold styling for program name */
 .program-item strong {
     font-size: 1.2rem;
     color: #000;
 }
 
+/* Additional text styling for program details */
 .program-item p {
     margin: 5px 0 0;
     font-size: 0.9rem;
     color: #666;
 }
 
+/* Arrow icon styling for navigation */
 .arrow {
     font-size: 1.5rem;
     color: #000;
 }
 
-/* Footer Styling */
+/* =========================================================
+   12. Footer
+   ========================================================= */
+
+/* Styling for the footer area */
 #footer {
-    background-color: #fcdd04; /* OsloMet-inspired yellow */
-    padding: 20px 0; /* Add vertical padding */
+    background-color: #fcdd04;
+    padding: 20px 0;
     color: #000;
     font-family: 'Arial', sans-serif;
     font-size: 0.9rem;
-    width: 100%; /* Ensure full width */
+    width: 100%;
 }
 
+/* Layout for footer content */
 .footer-container {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
     gap: 20px;
-    max-width: 1200px; /* Center content within a max width */
-    margin: 0 auto; /* Center horizontally */
-    padding: 0 20px; /* Add padding for spacing */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
 }
 
-.footer-left,
-.footer-center,
-.footer-right {
+/* Footer columns for left, center, and right sections */
+.footer-left, .footer-center, .footer-right {
     flex: 1;
     min-width: 200px;
 }
 
+/* Footer heading styling */
 .footer-left h3 {
     font-size: 1rem;
     font-weight: bold;
     margin-bottom: 5px;
 }
 
-.footer-left p {
+/* Footer list and paragraph styling */
+.footer-left p, .footer-center ul li, .footer-right ul li {
     margin: 5px 0;
 }
 
-.footer-left .footer-link {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #000;
-}
-
-.footer-left .footer-link:hover {
-    color: #333;
-    border-bottom-color: #333;
-}
-
-.footer-center ul {
+/* List styling for footer links */
+.footer-center ul, .footer-right ul {
     list-style: none;
     padding: 0;
 }
 
-.footer-center ul li {
-    margin: 5px 0;
-}
-
-.footer-center ul li a {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid transparent;
-    transition: border-color 0.3s ease;
-}
-
-.footer-center ul li a:hover {
-    border-bottom: 1px solid #000;
-}
-
-.footer-right ul {
-    list-style: none;
-    padding: 0;
-}
-
-.footer-right ul li {
-    margin: 5px 0;
-}
-
+/* Footer link styling */
 .footer-right ul li a {
     color: #000;
     text-decoration: none;
@@ -620,18 +512,52 @@ main ul {
     align-items: center;
 }
 
+/* Footer icon styling for social media links */
 .footer-right ul li .icon {
     font-weight: bold;
     font-size: 1.2rem;
     margin-right: 5px;
 }
 
-/* Footer Bottom Section */
+/* Footer copyright text styling */
 footer p {
-    background-color: #fcdd04; /* Match footer background */
-    margin: 0; /* Remove margins */
+    background-color: #fcdd04;
+    margin: 0;
     text-align: center;
-    padding: 10px 0; /* Add spacing */
+    padding: 10px 0;
     font-size: 0.9rem;
     font-weight: bold;
+}
+
+/* =========================================================
+   13. Additional Links Styling
+   ========================================================= */
+
+/* Link styling for "Studiested" section */
+#studiested .link-arrow {
+    display: inline-block;
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #fcdd04;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#studiested .link-arrow::before {
+    content: '>';
+    margin-right: 5px;
+    color: #000;
+}
+
+/* Contact link styling for "Spørsmål" section */
+#sporsmal .link-contact {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 2px solid #fcdd04;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+#sporsmal .link-contact:hover {
+    border-bottom-color: #ffe066;
 }

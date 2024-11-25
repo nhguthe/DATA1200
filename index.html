@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="no">
 <head>
+    <!-- Meta tags for character set and responsive viewport -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Matematisk Modellering og Datavitenskap - OsloMet.">
     <title>Matematisk modellering og datavitenskap – ingeniør</title>
+    <!-- Linking main CSS file -->
     <link rel="stylesheet" href="css/main.css">
+    <!-- Defer JavaScript loading to ensure DOM is loaded first -->
     <script src="js/scripts.js" defer></script>
 </head>
 <body>
+    <!-- Header section with logo and navigation menu -->
     <header>
         <div class="logo-container">
             <a href="index.html">
@@ -25,26 +29,51 @@
         </nav>
     </header>
 
+    <!-- Cover photo section -->
     <section id="cover-photo">
         <h1>Velkommen til Matematisk Modellering og Datavitenskap</h1>
     </section>
 
     <main>
+        <!-- Overview of the study program -->
         <section id="studieoversikt">
             <h1>Matematisk modellering og datavitenskap – ingeniør</h1>
             <h2>Bachelorprogram</h2>            
             <div class="info-grid">
-                <div class="info-item"><h3>Studiested</h3><p>Pilestredet i Oslo</p></div>
-                <div class="info-item"><h3>Varighet</h3><p>3 år</p></div>
-                <div class="info-item"><h3>Omfang</h3><p>Heltid</p></div>
-                <div class="info-item"><h3>Studiepoeng</h3><p>180</p></div>
-                <div class="info-item"><h3>Studiestart</h3><p>August</p></div>
-                <div class="info-item"><h3>Undervisningsspråk</h3><p>Norsk<br>Engelsk</p></div>
-                <div class="info-item"><h3>Studieplasser</h3><p>40</p></div>
+                <!-- Grid items containing basic info about the study program -->
+                <div class="info-item">
+                    <h3>Studiested</h3>
+                    <p>Pilestredet i Oslo</p>
+                </div>
+                <div class="info-item">
+                    <h3>Varighet</h3>
+                    <p>3 år</p>
+                </div>
+                <div class="info-item">
+                    <h3>Omfang</h3>
+                    <p>Heltid</p>
+                </div>
+                <div class="info-item">
+                    <h3>Studiepoeng</h3>
+                    <p>180</p>
+                </div>
+                <div class="info-item">
+                    <h3>Studiestart</h3>
+                    <p>August</p>
+                </div>
+                <div class="info-item">
+                    <h3>Undervisningsspråk</h3>
+                    <p>Norsk<br>Engelsk</p>
+                </div>
+                <div class="info-item">
+                    <h3>Studieplasser</h3>
+                    <p>40</p>
+                </div>
             </div>
             <p>Få innsikt i matematiske modeller og datadrevne metoder som kan løse mange praktiske og samfunnsnyttige oppgaver.</p>
         </section>
 
+        <!-- Admission requirements section -->
         <section id="opptakskrav">
             <h2 class="collapsible-heading">Opptakskrav og poeng</h2>
             <div class="collapsible-content">
@@ -54,11 +83,12 @@
                     <li>Matematikk R1 og R2</li>
                     <li>Fysikk 1</li>
                 </ul>
-                <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn. </p>
+                <p>Det kan være konkurranse om plassene. Ved forrige opptak kom alle kvalifiserte søkere inn.</p>
                 <p>Hvis du mangler generell studiekompetanse eller enkelte fag fra videregående skole, kan du søke på dette studiet om du har <a href="https://www.oslomet.no/studier/tkd/forkurs-ingenior" target="_blank"><strong>bestått ettårig forkurs for ingeniørutdanning</strong></a>.</p>
             </div>
         </section>
 
+        <!-- How to apply section -->
         <section id="slik-soker-du">
             <h2 class="collapsible-heading">Slik søker du?</h2>
             <div class="collapsible-content">
@@ -72,6 +102,7 @@
             </div>
         </section>
 
+        <!-- Learning outcomes section -->
         <section id="hva-laerer-du">
             <h2 class="collapsible-heading">Hva lærer du?</h2>
             <div class="collapsible-content">
@@ -82,37 +113,38 @@
                     <li>Avsluttes med en bacheloroppgave tett knyttet til arbeidslivet</li>
                 </ul>
                    <!-- Accordion for "Statistiske og datadrevne metoder" -->
-            <section class="accordion">
-                <h3 class="collapsible-heading" aria-expanded="false">Statistiske og datadrevne metoder</h3>
-                <div class="collapsible-content">
-                    <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til å gjøre beregninger, for eksempel av fremtidige strømpriser.</p>
-                    <p>Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale datatyper. Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
-                </div>
-            </section>
+                <section class="accordion">
+                    <h3 class="collapsible-heading" aria-expanded="false">Statistiske og datadrevne metoder</h3>
+                    <div class="collapsible-content">
+                        <p>Du lærer om hvordan du kan bruke målte data koblet med datadrevne og statistiske metoder til å gjøre beregninger, for eksempel av fremtidige strømpriser.</p>
+                        <p>Du lærer hvordan du kan løse komplekse og sammensatte problemer, og utforske høydimensjonale datatyper. Moderne metoder innen maskinlæring og kunstig intelligens står sentralt.</p>
+                    </div>
+                </section>
 
-            <!-- Accordion for "Vitenskapelige beregninger" -->
-            <section class="accordion">
-                <h3 class="collapsible-heading" aria-expanded="false">Vitenskapelige beregninger</h3>
-                <div class="collapsible-content">
-                    <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og fysiske problemer med numeriske metoder.</p>
-                    <p>Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.</p>
-                </div>
-            </section>
+                <!-- Accordion for "Vitenskapelige beregninger" -->
+                <section class="accordion">
+                    <h3 class="collapsible-heading" aria-expanded="false">Vitenskapelige beregninger</h3>
+                    <div class="collapsible-content">
+                        <p>Du lærer å lage effektive algoritmer, datastrukturer og kildekoder for å løse matematiske og fysiske problemer med numeriske metoder.</p>
+                        <p>Du lærer å utvikle kildekode og metodikk knyttet til medisinsk teknologi, biologiske prosesser og annet.</p>
+                    </div>
+                </section>
 
-            <!-- Accordion for "Matematikk og fysikk" -->
-            <section class="accordion">
-                <h3 class="collapsible-heading" aria-expanded="false">Matematikk og fysikk</h3>
-                <div class="collapsible-content">
-                    <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.</p>
-                    <p>Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer, representasjonsteori og kategoriteori.</p>
-                    <p>I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
-                </div>
-            </section>
+                <!-- Accordion for "Matematikk og fysikk" -->
+                <section class="accordion">
+                    <h3 class="collapsible-heading" aria-expanded="false">Matematikk og fysikk</h3>
+                    <div class="collapsible-content">
+                        <p>Du utforsker algebraiske strukturer, blant annet knyttet til dyp læring og kunstig intelligens.</p>
+                        <p>Du lærer differensialgeometri på flater, gruppeteori og kodeteori; matematiske strukturer, representasjonsteori og kategoriteori.</p>
+                        <p>I fysikk lærer du om termodynamikk og statistisk fysikk.</p>
+                    </div>
+                </section>
 
-            <p><a href="https://student.oslomet.no/studier/-/studieinfo/programplan/HINGMAMO/2024/H%C3%98ST" target="_blank"><strong>Se programplan på student.oslomet.no</strong></a></p>
+                <p><a href="https://student.oslomet.no/studier/-/studieinfo/programplan/HINGMAMO/2024/H%C3%98ST" target="_blank"><strong>Se programplan på student.oslomet.no</strong></a></p>
             </div>
         </section>
 
+        <!-- Teaching methods section -->
         <section id="undervisning">
             <h2 class="collapsible-heading">Hvordan foregår undervisningen?</h2>
             <div class="collapsible-content">
@@ -218,7 +250,6 @@
             </div>
         </section>
         
-        
         <section id="kostnad">
             <h2 class="collapsible-heading">Hva koster det?</h2>
             <div class="collapsible-content">
@@ -231,65 +262,62 @@
             </div>
         </section>
 
+            <!-- Job opportunities section -->
         <section id="jobbmuligheter">
             <h2 class="collapsible-heading">Hva kan du jobbe som?</h2>
             <div class="collapsible-content">
-                <p>
-                    Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.
-                </p>
-                <p>
-                    Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt kompetanse i arbeidslivet etter bachelorstudiet.
-                </p>
-                <p>
-                    Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.
-                </p>
-                <p>
-                    Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.
-                </p>
+                <p>Med dette studiet får du IT-kompetanse som er etterspurt i arbeidslivet, særlig om du velger spesialiseringene vitenskapelige beregninger eller statistiske og datadrevne metoder.</p>
+                <p>Spesialiseringen i matematikk og fysikk retter seg mer mot videre studier, men også her får du etterspurt kompetanse i arbeidslivet etter bachelorstudiet.</p>
+                <p>Matematisk modellering og datavitenskap blir stadig viktigere som basisgrunnlag, i for eksempel beregninger knyttet til klima, forsikring og finans, og datadrevne metoder for verdiskaping.</p>
+                <p>Datadrevne metoder og maskinlæring er i dag svært mye brukt i arbeidslivet.</p>
             </div>
         </section>
 
+        <!-- Exchange opportunities section -->
         <section id="Utveksling">
             <h2 class="collapsible-heading">Utveksling</h2>
             <div class="collapsible-content">
-                <p> Du kan dra på utveksling i femte semester. </p>
+                <p>Du kan dra på utveksling i femte semester.</p>
             </div>
         </section>
         
+        <!-- Further study opportunities section -->
         <section id="videre_muligheter">
             <h2 class="collapsible-heading">Videre studiemuligheter ved OsloMet</h2>
             <div class="collapsible-content">
-                    <a href="https://www.oslomet.no/studier/tkd/anvendt-data-informasjonsteknologi" target="_blank">
-                        <strong>Anvendt data- og informasjonsteknologi (ACIT)</strong>
-                    </a>
-                    <p class="study-meta">Masterprogram | 2 år | Pilestredet i Oslo | Heltid</p>
-                </div>
+                <a href="https://www.oslomet.no/studier/tkd/anvendt-data-informasjonsteknologi" target="_blank"><strong>Anvendt data- og informasjonsteknologi (ACIT)</strong></a>
+                <p class="study-meta">Masterprogram | 2 år | Pilestredet i Oslo | Heltid</p>
             </div>
         </section>
 
+        <!-- Campus location section -->
         <section id="studiested">
             <h2>Studiested</h2>
             <p><a href="https://www.oslomet.no/om/studiested-pilestredet" class="link-arrow">Studiested Pilestredet</a></p>
         </section>
         
+        <!-- Contact information section -->
         <section id="sporsmal">
             <h2>Spørsmål om utdanningen?</h2>
             <p>Har du spørsmål om utdanningen, <a href="https://www.oslomet.no/kontaktskjema#For%20utdanningss%C3%B8kere?faculty=Fakultet%20for%20teknologi,%20kunst%20og%20design" class="link-contact">kontakt oss gjennom vårt kontaktskjema</a>.</p>
         </section>
         
+        <!-- Academic leader section -->
         <section id="faglig-leder">
             <h2>Faglig leder</h2>
             <a href="https://www.oslomet.no/om/ansatt/krhel3944/" target="_blank" class="leader-link">
-            <div class="leader-profile">
-                <img src="media/krhel3944.png" alt="Kristoffer Herland Hellton" class="leader-photo">
-                <div class="leader-info">
-                    <p class="leader-name"><strong>Kristoffer Herland Hellton</strong></p>
-                    <p>førsteamanuensis</p>
-                    <p>+47 672 37 240 | <a href="mailto:kristoffer.hellton@oslomet.no">kristoffer.hellton@oslomet.no</a></p>
+                <div class="leader-profile">
+                    <img src="media/krhel3944.png" alt="Kristoffer Herland Hellton" class="leader-photo">
+                    <div class="leader-info">
+                        <p class="leader-name"><strong>Kristoffer Herland Hellton</strong></p>
+                        <p>førsteamanuensis</p>
+                        <p>+47 672 37 240 | <a href="mailto:kristoffer.hellton@oslomet.no">kristoffer.hellton@oslomet.no</a></p>
+                    </div>
                 </div>
-            </div>
+            </a>
         </section>
 
+        <!-- Related programs section -->
         <section id="related-programs">
             <h2>Du er kanskje også interessert i disse?</h2>
             <div class="program-list">
@@ -300,6 +328,7 @@
                     </div>
                     <span class="arrow">›</span>
                 </a>
+                <!-- Repeat similar structure for other related programs -->
                 <a href="https://www.oslomet.no/studier/tkd/bioteknologi-kjemiingenior" class="program-item">
                     <div>
                         <strong>Bioteknologi- og kjemiingeniør</strong>
@@ -350,42 +379,45 @@
                     <span class="arrow">›</span>
                 </a>
             </div>
-        </section>        
-      
-        <footer id="footer">
-            <div class="footer-container">
-                <div class="footer-left">
-                    <h3>OSLO METROPOLITAN UNIVERSITY</h3>
-                    <p>STORBYUNIVERSITETET</p>
-                    <p>Postboks 4, St. Olavs plass</p>
-                    <p>0130 Oslo</p>
-                    <p>Tlf.: 67 23 50 00</p>
-                    <p><a href="#" class="footer-link">Kontakt oss</a></p>
-                </div>
-                <div class="footer-center">
-                    <ul>
-                        <li><a href="#">English</a></li>
-                        <li><a href="#">Alumni</a></li>
-                        <li><a href="#">Ansatteoversikt</a></li>
-                        <li><a href="#">Arrangementoversikt</a></li>
-                        <li><a href="#">For ansatte</a></li>
-                        <li><a href="#">For studenter</a></li>
-                        <li><a href="#">Ledige stillinger</a></li>
-                        <li><a href="#">Personvernerklæring og informasjonskapslar</a></li>
-                        <li><a href="#">Pressekontakt</a></li>
-                        <li><a href="#">Tilgjengelegheitserklæring</a></li>
-                        <li><a href="#">Admin</a></li>
-                    </ul>
-                </div>
-                <div class="footer-right">
-                    <ul class="social-links">
-                        <li><a href="#"><span class="icon">F</span> Facebook</a></li>
-                        <li><a href="#"><span class="icon">X</span> X (Twitter)</a></li>
-                        <li><a href="#"><span class="icon">I</span> LinkedIn</a></li>
-                        <li><a href="#"><span class="icon">📸</span> Instagram</a></li>
-                    </ul>
-                </div>
+        </section>   
+    </main>
+
+    <!-- Footer section with contact information and navigation links -->
+    <footer id="footer">
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>OSLO METROPOLITAN UNIVERSITY</h3>
+                <p>STORBYUNIVERSITETET</p>
+                <p>Postboks 4, St. Olavs plass</p>
+                <p>0130 Oslo</p>
+                <p>Tlf.: 67 23 50 00</p>
+                <p><a href="#" class="footer-link">Kontakt oss</a></p>
             </div>
-            <p>&copy; 2024 OsloMet</p>
-        </footer>
-        
+            <div class="footer-center">
+                <ul>
+                    <li><a href="#">English</a></li>
+                    <li><a href="#">Alumni</a></li>
+                    <li><a href="#">Ansatteoversikt</a></li>
+                    <li><a href="#">Arrangementoversikt</a></li>
+                    <li><a href="#">For ansatte</a></li>
+                    <li><a href="#">For studenter</a></li>
+                    <li><a href="#">Ledige stillinger</a></li>
+                    <li><a href="#">Personvernerklæring og informasjonskapslar</a></li>
+                    <li><a href="#">Pressekontakt</a></li>
+                    <li><a href="#">Tilgjengelegheitserklæring</a></li>
+                    <li><a href="#">Admin</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <ul class="social-links">
+                    <li><a href="#"><span class="icon">F</span> Facebook</a></li>
+                    <li><a href="#"><span class="icon">X</span> X (Twitter)</a></li>
+                    <li><a href="#"><span class="icon">I</span> LinkedIn</a></li>
+                    <li><a href="#"><span class="icon">📸</span> Instagram</a></li>
+                </ul>
+            </div>
+        </div>
+        <p>&copy; 2024 OsloMet</p>
+    </footer>
+</body>
+</html>
