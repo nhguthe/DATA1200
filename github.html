@@ -1,61 +1,71 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Learn more about our GitHub repository and collaborative work.">
-    <title>GitHub</title>
+    <meta name="description" content="GitHub-side for dokumentasjon av samarbeidsprosess">
+    <title>GitHub - OsloMet-nettsted</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="media/OsloMet_Logo.png" alt="OsloMet Logo" class="logo">
+            </a>
+        </div>
         <nav>
             <ul>
-                <li><a href="index.html" aria-label="Go to homepage">Home</a></li>
-                <li><a href="accessibility.html" aria-label="Learn about accessibility">Accessibility</a></li>
-                <li><a href="github.html" aria-label="View our GitHub page">GitHub</a></li>
-                <li><a href="activity.html" aria-label="Explore our activity page">Activity</a></li>
+                <li><a href="index.html" aria-label="Gå til hjemmesiden">Hjem</a></li>
+                <li><a href="accessibility.html" aria-label="Om tilgjengelighet">Tilgjengelighet</a></li>
+                <li><a href="github.html" aria-label="Vis GitHub-siden" class="active-link">GitHub</a></li>
+                <li><a href="activity.html" aria-label="Utforsk aktivitetsiden">Aktivitet</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <h1>Our GitHub Repository</h1>
-        <section aria-labelledby="github-overview">
-            <h2 id="github-overview">Repository Overview</h2>
-            <p>Our GitHub repository contains all the project files for this exam, including HTML, CSS, and any other resources. It is structured to ensure clarity and collaboration.</p>
-            <p>
-                Visit our GitHub repository here: 
-                <a href="https://github.com/YourGitHubUsername/YourRepositoryName" target="_blank" rel="noopener noreferrer">
-                    GitHub Repository
-                </a>.
-            </p>
+        <section id="introduksjon">
+            <h1>GitHub og samarbeid i repositorier</h1>
+            <p>GitHub er en plattform som forenkler samarbeid og versjonskontroll for utviklingsteam. Gjennom Git og GitHub kan koden deles, vurderes og forbedres, samtidig som tidligere versjoner lagres for sporbarhet.</p>
         </section>
 
-        <section aria-labelledby="github-collaboration">
-            <h2 id="github-collaboration">Collaboration and Workflow</h2>
+        <section id="commit-historikk">
+            <h2>Commit-historikk</h2>
+            <p>Commit-historikken gir en oversikt over hvilke endringer som er gjort, hvem som har gjort dem, og når de ble implementert. Dette er essensielt for å holde oversikt over prosjektets fremdrift og for å oppdage feil tidlig.</p>
+            <img src="media/commit_history_example1.png" alt="Eksempel på commit-historikk" class="illustration">
+            <img src="media/commit_history_example2.png" alt="Eksempel på commit-historikk med detaljer" class="illustration">
+        </section>
+
+        <section id="spesifikke-endringer">
+            <h2>Spesifikke endringer</h2>
+            <p>Spesifikke endringer innenfor commits viser hva som faktisk ble lagt til eller fjernet i prosjektet. Dette er nyttig for å forstå hensikten bak endringene og for å spore feil eller forbedringer.</p>
+            <img src="media/commit_change_example1.png" alt="Eksempel på spesifikke endringer i en commit" class="illustration">
+            <img src="media/commit_change_example2.png" alt="Eksempel på endringer i en commit" class="illustration">
+        </section>
+
+        <section id="fordeler-git">
+            <h2>Fordeler med Git og GitHub</h2>
+            <p>Å bruke Git og GitHub gir en rekke fordeler som forbedrer arbeidsflyten og samarbeidet:</p>
             <ul>
-                <li>We use GitHub for version control, ensuring that all team members can contribute seamlessly.</li>
-                <li>Our workflow includes:
-                    <ul>
-                        <li>Committing code with clear and concise messages.</li>
-                        <li>Branching to work on features independently.</li>
-                        <li>Pull requests for merging new features into the main branch.</li>
-                    </ul>
-                </li>
+                <li>Sporbarhet: Mulighet til å se alle endringer som er gjort i prosjektet.</li>
+                <li>Sikkerhet: Tidligere versjoner av koden kan alltid gjenopprettes.</li>
+                <li>Samarbeid: Flere brukere kan arbeide på samme prosjekt samtidig uten konflikt.</li>
+                <li>Kodegjennomgang: Gjennom pull requests kan endringer vurderes før de legges inn i hovedgrenen.</li>
+                <li>Automatisering: GitHub Actions gjør det mulig å sette opp kontinuerlig testing og distribusjon.</li>
             </ul>
         </section>
 
-        <section aria-labelledby="github-how-to-clone">
-            <h2 id="github-how-to-clone">How to Clone the Repository</h2>
-            <p>To clone our repository to your local machine, use the following command in your terminal:</p>
-            <pre><code>git clone https://github.com/YourGitHubUsername/YourRepositoryName.git</code></pre>
-            <p>Make sure you have <a href="https://git-scm.com/" target="_blank" rel="noopener noreferrer">Git installed</a> on your system.</p>
+        <section id="problemer">
+            <h2>Problemer med oppsett av Git i VS Code</h2>
+            <p>Noen utfordringer oppstod under oppsettet av Git-integrasjon i VS Code:</p>
+            <ul>
+                <li>Autentisering: Generering og bruk av SSH-nøkler var utfordrende å sette opp riktig første gang.</li>
+                <li>Feilmargin: Konflikter oppstod ofte når flere brukere redigerte samme fil uten tilstrekkelig kommunikasjon.</li>
+                <li>Filstruktur: Manglende standardisering av filnavn og -plassering førte til unødvendige endringer i commits.</li>
+            </ul>
+            <p>Disse problemene ble løst ved hjelp av grundig dokumentasjon, faste rutiner for commit-meldinger og tydelig kommunikasjon om hvem som arbeider med hvilke filer.</p>
         </section>
     </main>
-
-    <footer>
-        <p>&copy; 2024 Mathematical Modelling Group. All rights reserved.</p>
-    </footer>
 </body>
 </html>
