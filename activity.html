@@ -1,44 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="no">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Explore our team's favorite activities and hobbies.">
-    <title>Activity</title>
+    <meta name="description" content="Aktivitetsside - Løping i Oslo">
+    <title>Aktivitet - Løping i Oslo</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
     <header>
+        <div class="logo-container">
+            <a href="index.html">
+            </a>
+        </div>
         <nav>
             <ul>
                 <li><a href="index.html" aria-label="Go to homepage">Home</a></li>
                 <li><a href="accessibility.html" aria-label="Learn about accessibility">Accessibility</a></li>
                 <li><a href="github.html" aria-label="View our GitHub page">GitHub</a></li>
-                <li><a href="activity.html" aria-label="Explore our activity page">Activity</a></li>
+                <li><a href="activity.html" aria-label="Explore our activity page" class="active-link">Activity</a></li>
             </ul>
         </nav>
     </header>
 
-    <main>
-        <h1>My Favorite Activity</h1>
-        <section aria-labelledby="activity-details">
-            <h2 id="activity-details">Hiking in Nature</h2>
-            <p>Hiking is a wonderful way to explore nature, get fresh air, and exercise. It's an activity that offers scenic views and opportunities to connect with the environment.</p>
-            <img src="media/hiking.jpg" alt="A scenic mountain trail with vibrant greenery">
+    <section id="cover-photo-run">
+        <h1>Løping i Oslo</h1>
+    </section>
+
+    <main_run>
+        <section id="introduction">
+            <h1>Oppdag løping i Oslo</h1>
+            <p>Løping er en populær aktivitet i Oslo med vakre områder og mange tilgjengelige arrangementer. Uansett om du er en nybegynner eller en erfaren løper, har Oslo noe å tilby.</p>
         </section>
 
-        <section aria-labelledby="activity-benefits">
-            <h2 id="activity-benefits">Benefits of Hiking</h2>
+        <section id="events">
+            <h2>Løpsarrangementer i Oslo</h2>
+            <p>Oslo er hjem til flere spennende løpsarrangementer året rundt:</p>
             <ul>
-                <li>Improves physical fitness</li>
-                <li>Boosts mental well-being</li>
-                <li>Encourages appreciation of nature</li>
+                <li><a href="https://www.parkrun.no/" target="_blank">Parkrun Norge</a> - Gratis ukentlige løp i ulike parker.</li>
+                <li><a href="https://oslolopsfestival.no/" target="_blank">Oslo Løpsfestival</a> - En feiring av løping med ulike distanser.</li>
+                <li><a href="https://oslomaraton.no/" target="_blank">Oslo Maraton</a> - Norges største maratonløp.</li>
+                <li><a href="https://www.bislettstadion.no/om-oss/bislett-indoor-marathon" target="_blank">Bislett Indoor Marathon</a> - Et spennende maraton på Bislett stadion.</li>
             </ul>
+            <img src="media/Bislett_panorama.jpg" alt="Løpere ved et arrangement" class="illustration">
         </section>
-    </main>
+
+        <section id="running-areas">
+            <h2>Populære løpeområder i Oslo</h2>
+            <p>Oppdag fantastiske steder å løpe i Oslo:</p>
+            <ul>
+                <li><a href="https://ut.no/utforsker/omrade/1271/nordmarka/turforslag" target="_blank">Nordmarka</a> - Perfekt for naturentusiaster.</li>
+                <li><a href="https://www.oslo.kommune.no/natur-kultur-og-fritid/park-og-gronnstruktur/" target="_blank">Byparker</a> - Løp langs stiene i Frognerparken eller Ekebergparken.</li>
+                <li><a href="https://www.bislettstadion.no/" target="_blank">Bislett Stadion</a> - Ideelt for intervalltrening.</li>
+            </ul>
+            <p>Løpetipsene fra <a href="https://www.lopekurs.no/artikler-lopetips/loping-oslo" target="_blank">Løpekurs.no</a> gir praktiske råd:</p>
+            <ul>
+                <li>Utforsk Nordmarka for rolige og vakre omgivelser.</li>
+                <li>Løp langs Frognerkilen eller Sørenga for en bynær opplevelse med sjøutsikt.</li>
+                <li>Bruk apper som Strava for å finne populære ruter.</li>
+            <img src="media/A_summer_day_at_Sognsvann.jfif" alt="Sti i skogen ved Sognsvann" class="illustration">
+        </section>
+
+        <section id="equipment">
+            <h2>Utstyr for løping</h2>
+            <p>For en bedre løpsopplevelse, vurder å bruke anbefalt utstyr:</p>
+            <ul>
+                <li><a href="https://www.loplabbet.no/" target="_blank">Løplabbet</a> - Spesialist på løpesko og klær.</li>
+                <li><a href="https://www.oslosportslager.no/" target="_blank">Oslo Sportslager</a> - Bredt utvalg av sportsutstyr.</li>
+                <li><a href="https://www.tek.no/samletest/i/86MOax/de-beste-treningsklokkene?srsltid=AfmBOooBoEQBnxDlOhgRVsoRd5H3i8uvTiWu7kXIaBrJd5FcEwHlblhf" target="_blank">Treningsklokke</a> - Finn ut hvilken treningsklokke som passer deg best med 2024 sin store test</li>
+            </ul>
+            <img src="media/Runnin_shoes.jpg" alt="Løpesko på en sti" class="illustration">
+        </section>
+    </main_run>
 
     <footer>
-        <p>&copy; 2024 Mathematical Modelling Group. All rights reserved.</p>
+        <div class="footer-container">
+        </div>
     </footer>
 </body>
 </html>

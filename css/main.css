@@ -286,6 +286,26 @@ main ul {
     margin: 0;
 }
 
+#cover-photo-run {
+    background: url('../media/Running_cover.jpg') no-repeat center center;
+    background-size: cover;
+    height: 700px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+}
+
+/* Heading within the cover photo section */
+#cover-photo-run h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+
 /* =========================================================
    9. Study Structure Table
    ========================================================= */
@@ -560,4 +580,223 @@ footer p {
 
 #sporsmal .link-contact:hover {
     border-bottom-color: #ffe066;
+}
+
+
+
+/* =========================================================
+   MEDIA QUERIES
+   ========================================================= */
+
+   /* General styles for images */
+.illustration {
+    max-width: 100%;
+    height: auto;
+    margin: 20px 0;
+    border-radius: 8px; /* Adds subtle rounding to images */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds a light shadow for depth */
+}
+
+/* Cover photo specific to activity page */
+#cover-photo-run {
+    background: url('../media/Running_cover.jpg') no-repeat center center;
+    background-size: cover;
+    height: 400px; /* Adjust height for better screen fit */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.7);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 4px solid #ffe066; /* Adds a decorative bottom border */
+}
+
+/* Text inside the cover section */
+#cover-photo-run h1 {
+    font-size: 2.5rem;
+    margin: 0;
+}
+
+/* Section styling for better spacing */
+main_run section {
+    margin-bottom: 40px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+}
+
+/* Subheading styles */
+main_run h2 {
+    font-size: 1.8rem;
+    color: #0044cc;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #ffe066;
+    padding-bottom: 5px;
+}
+
+/* Paragraph text for improved readability */
+main_run p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+}
+
+/* Link styles within the main content */
+main_run a {
+    color: #0044cc;
+    text-decoration: none;
+    border-bottom: 1px solid #0044cc;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+main_run a:hover {
+    color: #ff8800;
+    border-bottom-color: #ff8800;
+}
+
+/* Unordered list for consistency */
+main_run ul {
+    margin-left: 20px;
+    list-style: circle;
+    line-height: 1.6;
+}
+
+/* =========================================================
+   SPECIFIC STYLING FOR ACTIVITY.HTML
+   ========================================================= */
+
+/* Cover photo styling for activity.html */
+#cover-photo-run {
+    background: url('../media/Running_cover.jpg') no-repeat center center;
+    background-size: cover;
+    height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff; /* White text for visibility */
+    text-shadow: 0 3px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    padding: 20px;
+    border-bottom: 5px solid #2a9d8f; /* Decorative teal bottom border */
+}
+
+#cover-photo-run h1 {
+    font-size: 3rem;
+    font-weight: bold;
+    margin: 0;
+    letter-spacing: 1px; /* Slight spacing for elegance */
+}
+
+/* Main content area for activity.html */
+main_run {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    font-family: 'Roboto', Arial, sans-serif;
+    background-color: #f9fafb; /* Subtle light gray background */
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Section styling */
+main_run section {
+    margin-bottom: 40px;
+    padding: 25px;
+    border: 1px solid #e0e0e0;
+    border-radius: 10px;
+    background-color: #ffffff; /* Clean white for contrast */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    max-width: 900px; /* Restrict section width */
+    margin-left: auto;
+    margin-right: auto; /* Center-align sections */
+}
+
+/* Subheadings */
+main_run h2 {
+    font-size: 2rem;
+    color: #264653; /* Deep green-blue inspired by nature */
+    margin-bottom: 15px;
+    border-bottom: 3px solid #e76f51; /* Earthy red underline */
+    padding-bottom: 5px;
+    text-transform: uppercase; /* Modern look */
+    text-align: center;
+}
+
+/* Paragraph styling */
+main_run p {
+    font-size: 1.1rem;
+    color: #4f4f4f; /* Neutral gray */
+    line-height: 1.8;
+    margin-bottom: 20px;
+    text-align: justify; /* Improve text alignment */
+}
+
+/* List styling */
+main_run ul {
+    margin-left: 20px;
+    list-style: circle;
+    color: #2a9d8f; /* Muted teal */
+    font-size: 1rem;
+    line-height: 1.7;
+}
+
+main_run ul li {
+    margin-bottom: 10px;
+}
+
+/* Links within activity.html */
+main_run a {
+    color: #2a9d8f; /* Teal */
+    text-decoration: none;
+    border-bottom: 2px solid #2a9d8f;
+    transition: color 0.3s, border-bottom-color 0.3s;
+}
+
+main_run a:hover {
+    color: #e76f51; /* Earthy red on hover */
+    border-bottom-color: #e76f51;
+}
+
+/* Images */
+main_run img.illustration {
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto;
+    display: block; /* Center images */
+    border-radius: 12px; /* Rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-height: 400px; /* Prevent excessively tall images */
+    object-fit: cover; /* Maintain aspect ratio */
+}
+
+main_run img.illustration:hover {
+    transform: scale(1.03); /* Slight zoom-in effect */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Deeper shadow on hover */
+}
+
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    #cover-photo-run {
+        height: 300px;
+    }
+
+    #cover-photo-run h1 {
+        font-size: 2rem;
+    }
+
+    main_run {
+        padding: 15px;
+    }
+
+    main_run h2 {
+        font-size: 1.5rem;
+    }
+
+    main_run img.illustration {
+        max-height: 300px; /* Adjust image height for smaller screens */
+    }
 }
